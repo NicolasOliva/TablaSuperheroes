@@ -1,4 +1,9 @@
 const boton1 = document.getElementById('btn');
+
+var hero = [{ id: 1 ,lele: "puto" },{id: 2 , marciana: ""},{id:3 , mayus: ""}]
+
+
+
 var onload = () =>{
     const xhr = new XMLHttpRequest();
 
@@ -17,37 +22,40 @@ var onload = () =>{
 
 onload();
 
+var newHero = {};
+
 const cargando = ()=>{
+    
     let id = document.getElementById('id').value;
     let nombre = document.getElementById('nombre').value;
-    let alias = document.getElementById('id').value;
-    let bio = document.getElementById('id').value;
-    let enemigos = document.getElementById('id').value;
-    let universe = document.getElementById('id').value;
+    let alias = document.getElementById('alias').value;
+    let bio = document.getElementById('bio').value;
+    let enemigos = document.getElementById('enemigos').value;
+    let universe = document.getElementById('universe').value;
         if(nombre === true){
-            agregar(nombre) = nombre;
+            return newHero.nombre = nombre;
         }
-
+    
+        /*const agregar = (id, nombre, alias, bio, enemigos)=>{
+            newHero.id = id;
+            newHero.nombre = nombre;   
+            newHero.alias=alias;
+            newHero.bio=bio;
+            newHero.enemigos=enemigos; 
+            if(id === "" || nombre === "" || alias === "" || bio === "" || enemigos === ""){
+                alert('Tu Heroe no esta completo!!')
+                return false;
+            } 
+        };    
+        return agregar(id,nombre,alias,bio,enemigos);*/
 
 }
 
-boton1.onclick = cargando();
+//boton1.onclick = cargando();
 
-var hero = [{ id: 1 ,lele: "puto" },{id: 2 , marciana: ""},{id:3 , mayus: ""}]
 
-var newHero = {};
 
-const agregar = (id, nombre, alias, bio, enemigos)=>{
-    newHero.id = id;
-    newHero.nombre = nombre;   
-    newHero.alias=alias;
-    newHero.bio=bio;
-    newHero.enemigos=enemigos; 
-    if(id === "" || nombre === "" || alias === "" || bio === "" || enemigos === ""){
-        alert('Tu Heroe no esta completo!!')
-        return false;
-    } 
-};
+
 
 const agregarID = ()=>{
     
