@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SuperHero</title>
+</head>
+<body>
+    <form action="" name="formulario" method="get" onsubmit="return agregar()">
+        <input type="number" value="" placeholder="ID" id="id" onclick="agregarID()"></br>
+        <input type="text" value="" placeholder="Name" id="nombre" onclick="agregarNombre()"></br>
+        <input type="text" value="" placeholder="Alias" id="alias" onclick="agregarAlias()"></br>
+        <input type="text" value="" placeholder="Biography" id="bio" onclick="agregarBio()"></br>
+        <input type="text" value="" placeholder="Universe" id="universe" onclick="agregarUniverse()"></br>
+        <input type="submit" value="Enviar" id="btn">
+    </form>
+    <button onclick="eliminar(1)"></button>
+</body>
+<script src="hero.js"></script>
+<script src="data.json"></script>
+</html>
