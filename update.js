@@ -88,3 +88,11 @@ function MostrarHeroe(heroe){  //se le pasa el heroe que se desea mostrar
   document.getElementById('romance').value = heroe.romance;
 
 }
+const editar = (heroeEditado)=>{
+    heroes.forEach((element,index) => {
+        if(element.id == heroeEditado.id)
+            element.nombre = heroeEditado.nombre //ejemplo 1
+            heroes[index].nombe = heroeEditado.nombre //ejemplo 2
+    });
+    
+}
