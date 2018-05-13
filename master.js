@@ -16,16 +16,29 @@ const Request = (method,url) => {
  }
 
 const Data = (method,url) => {
-  Request(method,url)
+  var json = " ";
+    Request(method,url)
     .then((res) => {
       if(res){
-        return res;
+        json = "hola";
+        console.log(json);
+        return json;
       }
     })
     .catch((error) =>{
       alert("Error al buscar la informacion");
     })
+console.log(json);
+    return json;
 }
 
-var heroes = Data("GET","data.json");
-console.log(heroes);
+var f = new Object();
+
+f = Data("GET","data.json");
+
+console.log("letra   " + f);
+
+
+d = Data("GET","data.json");
+
+console.log("letra   " + d);

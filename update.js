@@ -61,13 +61,11 @@ var heroes = [
     }
 ]
 
-function BuscarID(id){   //se le pasa el json(heroes) y el id que se desea buscar
+const BuscarID = (id) => {   //se le pasa el json(heroes) y el id que se desea buscar
     let flag = 0;
-
       for(var i = 0; i < heroes.length && flag == 0; i++){
         if(heroes[i].id == id){
           flag = 1;
-          console.log(heroes[i]);
           MostrarHeroe(heroes[i]);
           return heroes[i];
         }
@@ -77,22 +75,35 @@ function BuscarID(id){   //se le pasa el json(heroes) y el id que se desea busca
       }
 }
 
-function MostrarHeroe(heroe){  //se le pasa el heroe que se desea mostrar
-    debugger
-  //Esta funcion modifica el form del update.html con la informacion del heroe seleccionado
+const MostrarHeroe = (heroe) => {  //se le pasa el heroe que se desea mostrar
+
+  document.getElementById('id').value = heroe.id;
   document.getElementById('nombre').value = heroe.nombre;
   document.getElementById('alias').value = heroe.alias;
   document.getElementById('bio').value = heroe.bio;
   document.getElementById('universo').value = heroe.universo;
   document.getElementById('enemigos').value = heroe.enemigos;
   document.getElementById('romance').value = heroe.romance;
-
 }
-const editar = (heroeEditado)=>{
-    heroes.forEach((element,index) => {
-        if(element.id == heroeEditado.id)
-            element.nombre = heroeEditado.nombre //ejemplo 1
-            heroes[index].nombe = heroeEditado.nombre //ejemplo 2
-    });
-    
+
+const ObtenerDatosForm = () => {
+
+    let heroe = new Object();
+
+    heroe.id = parseInt(document.getElementById('id').value);
+    heroe.nombre = document.getElementById('nombre').value;
+    heroe.alias = document.getElementById('alias').value;
+    heroe.bio = document.getElementById('bio').value;
+    heroe.universo = document.getElementById('universo').value;
+    heroe.enemigos = document.getElementById('enemigos').value;
+    heroe.romance = document.getElementById('romance').value;
+
+    return heroe;
+}
+
+const EditarHeroe = () => {
+
+    let HeroeModificado = ObtenerDatosForm();
+    let HeroeOriginal = BuscarID(HeroeModificado.id);
+    heroes[HeroeModificado.id -1] = HeroeModificado;
 }
