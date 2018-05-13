@@ -63,6 +63,7 @@ var heroes = [
 
 function BuscarID(id){   //se le pasa el json(heroes) y el id que se desea buscar
     let flag = 0;
+
       for(var i = 0; i < heroes.length && flag == 0; i++){
         if(heroes[i].id == id){
           flag = 1;
@@ -77,7 +78,7 @@ function BuscarID(id){   //se le pasa el json(heroes) y el id que se desea busca
 }
 
 function MostrarHeroe(heroe){  //se le pasa el heroe que se desea mostrar
-
+    debugger
   //Esta funcion modifica el form del update.html con la informacion del heroe seleccionado
   document.getElementById('nombre').value = heroe.nombre;
   document.getElementById('alias').value = heroe.alias;
