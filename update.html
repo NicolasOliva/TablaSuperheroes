@@ -7,7 +7,7 @@
   </head>
   <body>
     <form id="form_heroes" action="update.js" method="get">
-      <input type="text" placeholder="nombre" id="nombre">
+      <input type="text" placeholder="nombre" id="nombre" name="nombre">
       <br><br>
       <input type="text" placeholder="alias" id="alias">
       <br><br>
@@ -21,6 +21,10 @@
       <br><br><br>
       <button type="submit" name="enviar">Enviar</button>
     </form>
-    <a href="index.html">Volver</a>  
+    <br><br>
+    <a href="index.html">Volver</a>
+    <script>
+        document.getElementById('nombre').value = "hola";
+    </script>
   </body>
 </html>
