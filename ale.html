@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SuperHero</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="fonts/me123.ttf">
+</head>
+<body>
+    <button type="button" id="crearnuevo" class="form-button" onclick="mostrarmenu()" ondblclick="ocultarmenu()">Crear nuevo heroe!</button>
+    <form id="formulario" class="form" action="" name="formulario" method="post">
+        <h2 class="form-titulo form-titulo1">Crea tu propio Heroe!!</h2>
+        <div class="form-container">
+            <input type="number" class="form-text" name="id" placeholder="ID" id="id" >
+            <input type="text" class="form-text"  name="nombre" placeholder="Name" id="nombre">
+            <input type="text" class="form-text"  name="alias" placeholder="Alias" id="alias" >
+            <input type="text" class="form-text" name="bio" placeholder="Biography" id="bio" >
+            <input type="text" class="form-text"  name="universe" placeholder="Universe" id="universe">
+            <input type="text" class="form-text"  name="enemigos" placeholder="Enemy" id="enemigos">
+            <input type="button" class="form-button" value="Crear" id="btn" onclick="cargando();masHeroes(hero,newHero);">
+        </div>
+    </form>
+    <form class="form2" action="" name="formulario2" method="post">
+        <h2 class="form-titulo2">Elimina los Heroes que no te gusten!</h2>
+        <div class="form-container2">
+            <input type="text" class="form-text2"  name="borrarHeroe" placeholder="Nombre del heroe que desea eliminar" id="nombre1">
+            <input type="button" class="form-button" name="borrar" id="borrar" value="Borrar Heroe" onclick="borrarHeroe">
+        </div>
+    </form>
+</body>
+<script src="js/hero.js"></script>
+<script src="JSON/data.json"></script>
+</html>

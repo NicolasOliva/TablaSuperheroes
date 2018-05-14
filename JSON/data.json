@@ -1,4 +1,4 @@
-var heroes = [
+[
     {
         "id" : 1,
         "nombre" : "Batman",
@@ -47,7 +47,7 @@ var heroes = [
         "universo" : "DC",
         "foto" : "https://png.icons8.com/metro/1600/the-flash-head.png",
         "enemigos" : ["Weather Wizard","Reverse Flash","..."],
-        "romance" : "Dale Arden"
+        "romance" : "Dale Arden" 
     },
     {
         "id" : 6,
@@ -57,55 +57,6 @@ var heroes = [
        "universo" : "Marvel",
        "foto" : "http://pluspng.com/img-png/black-panther-png-image-black-panther-png-marvel-cinematic-universe-wiki-fandom-powered-by-wikia-429.png",
        "enemigos" : "Achebe",
-       "romance" : "Ororo Munroe/Tormenta"
+       "romance" : "Ororo Munroe/Tormenta" 
     }
 ]
-
-
-console.log(Data)
-const BuscarID = (id) => {   //se le pasa el json(heroes) y el id que se desea buscar
-    let flag = 0;
-      for(var i = 0; i < heroes.length && flag == 0; i++){
-        if(heroes[i].id == id){
-          flag = 1;
-          MostrarHeroe(heroes[i]);
-          return heroes[i];
-        }
-      }
-      if (flag == 0){
-        alert("Heroe no encontrado");
-      }
-}
-
-const MostrarHeroe = (heroe) => {  //se le pasa el heroe que se desea mostrar
-
-  document.getElementById('id').value = heroe.id;
-  document.getElementById('nombre').value = heroe.nombre;
-  document.getElementById('alias').value = heroe.alias;
-  document.getElementById('bio').value = heroe.bio;
-  document.getElementById('universo').value = heroe.universo;
-  document.getElementById('enemigos').value = heroe.enemigos;
-  document.getElementById('romance').value = heroe.romance;
-}
-
-const ObtenerDatosForm = () => {
-
-    let heroe = new Object();
-
-    heroe.id = parseInt(document.getElementById('id').value);
-    heroe.nombre = document.getElementById('nombre').value;
-    heroe.alias = document.getElementById('alias').value;
-    heroe.bio = document.getElementById('bio').value;
-    heroe.universo = document.getElementById('universo').value;
-    heroe.enemigos = document.getElementById('enemigos').value;
-    heroe.romance = document.getElementById('romance').value;
-
-    return heroe;
-}
-
-const EditarHeroe = () => {
-
-    let HeroeModificado = ObtenerDatosForm();
-    let HeroeOriginal = BuscarID(HeroeModificado.id);
-    heroes[HeroeModificado.id -1] = HeroeModificado;
-}
