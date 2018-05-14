@@ -1,5 +1,4 @@
-const view = document.getElementById('view');
-view.addEventListener('click', function(){
+const view = () =>{
     const xhr = new XMLHttpRequest();
 
     xhr.open('GET', 'data.json', true);
@@ -8,18 +7,17 @@ view.addEventListener('click', function(){
         if (this.status === 200) {
             var viewHeroes = JSON.parse(this.responseText);
 
-            let htmlTemplate = '';
+            let htmlTemplate = `                        
+                <th>Nombre</th>
+                <th>Alias</th>
+                <th>Bio</th>
+                <th>Universo</th>
+                <th>Némesis</th>
+                <th>Foto</th>
+                <th>Romance</th>
+                <th>Accion</th>`;
             viewHeroes.forEach((viewHeroes)=>{
                  htmlTemplate += `
-
-                        <th>Nombre</th>
-                        <th>Alias</th>
-                        <th>Bio</th>
-                        <th>Universo</th>
-                        <th>Némesis</th>
-                        <th>Foto</th>
-                        <th>Romance</th>
-
                 <tbody>
                     <tr>
                         <td>${viewHeroes.nombre}</td>
@@ -27,9 +25,9 @@ view.addEventListener('click', function(){
                         <td>${viewHeroes.bio}</td>
                         <td>${viewHeroes.universo}</td>
                         <td>${viewHeroes.nemesis}</td>
-                        <td>${viewHeroes.foto}</td>
+                        <td><img src="${viewHeroes.foto}" alt="Smiley face" height="42" width="42"></td>
                         <td>${viewHeroes.romance}</td>
-    
+                        <td><button onclick=borrarHeroe(${viewHeroes.id})>Editar</button><button onclick=borrarHeroe(${viewHeroes.id})>Borrar</button></td>
                     </tr> 
                 </tbody>
                 `;
@@ -39,4 +37,5 @@ view.addEventListener('click', function(){
         }
     }
     xhr.send();
-});
+};
+view();
