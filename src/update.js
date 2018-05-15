@@ -61,8 +61,6 @@ var heroes = [
     }
 ]
 
-
-console.log(Data)
 const BuscarID = (id) => {   //se le pasa el json(heroes) y el id que se desea buscar
     let flag = 0;
       for(var i = 0; i < heroes.length && flag == 0; i++){
@@ -77,28 +75,20 @@ const BuscarID = (id) => {   //se le pasa el json(heroes) y el id que se desea b
       }
 }
 
-const MostrarHeroe = (heroe) => {  //se le pasa el heroe que se desea mostrar
-
-  document.getElementById('id').value = heroe.id;
-  document.getElementById('nombre').value = heroe.nombre;
-  document.getElementById('alias').value = heroe.alias;
-  document.getElementById('bio').value = heroe.bio;
-  document.getElementById('universo').value = heroe.universo;
-  document.getElementById('enemigos').value = heroe.enemigos;
-  document.getElementById('romance').value = heroe.romance;
-}
 
 const ObtenerDatosForm = () => {
 
-    let heroe = new Object();
+    let heroe = {
+        id : parseInt(document.getElementById('id').value),
+        nombre : document.getElementById('nombre').value,
+        alias : document.getElementById('alias').value,
+        bio : document.getElementById('bio').value,
+        universo : document.getElementById('universo').value,
+        enemigos : document.getElementById('enemigos').value,
+        romance : document.getElementById('romance').value
+    }
 
-    heroe.id = parseInt(document.getElementById('id').value);
-    heroe.nombre = document.getElementById('nombre').value;
-    heroe.alias = document.getElementById('alias').value;
-    heroe.bio = document.getElementById('bio').value;
-    heroe.universo = document.getElementById('universo').value;
-    heroe.enemigos = document.getElementById('enemigos').value;
-    heroe.romance = document.getElementById('romance').value;
+
 
     return heroe;
 }
@@ -109,3 +99,5 @@ const EditarHeroe = () => {
     let HeroeOriginal = BuscarID(HeroeModificado.id);
     heroes[HeroeModificado.id -1] = HeroeModificado;
 }
+
+export default EditarHeroe;

@@ -1,4 +1,21 @@
-const xhr = new XMLHttpRequest();
+import Api from '../lib/api.js'
+import ShowModal from './modal' //este es el modal que viene de modal.js
+import creation from './hero' // este es el crear ale
+import editHeroe from './update' // este es el update de nico
+import borrarHeroe from './delete' // eliminar de ale
+
+window.ShowModal = ShowModal;
+
+window.borrarHeroe = borrarHeroe;
+
+
+//para editar dependiendo su modal
+// window.mimodal = () => {
+//     // pisar estilo del id="Cambiaso" del index.html
+//    ShowModal();
+// }
+
+
 
 const view = (viewHeroes) =>{
     let htmlTemplate = `                        
@@ -14,7 +31,7 @@ const view = (viewHeroes) =>{
          htmlTemplate += `
             <tbody>
                 <tr>
-                    <td>${viewHeroes.nombre}</td>
+                    <td><a href="#" onclick="funcionsera(${viewHeroes.id})">${viewHeroes.nombre}</a></td>
                     <td>${viewHeroes.alias}</td>
                     <td>${viewHeroes.bio}</td>
                     <td>${viewHeroes.universo}</td>
@@ -32,31 +49,19 @@ const view = (viewHeroes) =>{
 
 
 
-const Request = (method,url) => {
-  let promise = new Promise((resolve,reject) => {
-      xhr.open(method,url,true);
-      xhr.send();
-      xhr.onload = () => {
-        if(xhr.readyState == 4 && xhr.status == 200){
-          resolve(JSON.parse(xhr.responseText));
-        }else{
-          reject("Error");
-        }
-      }
-  })
-  return promise;
- }
-
 const Data = (method,url) => {
-  Request(method,url)
-    .then((res) => {
-      if(res){
-        view(res)
-      }
-    })
-    .catch((error) =>{
-      alert("Error al buscar la informacion");
-    })
+    Api(method,url)
+      .then((res) => {
+        if(res){
+          view(res)
+        }
+      })
+      .catch((error) =>{
+        alert("Error al buscar la informacion");
+      })
 }
 
 Data("GET","data.json");
+
+
+export default view ;
