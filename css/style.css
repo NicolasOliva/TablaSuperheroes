@@ -1,5 +1,11 @@
 body {font-family: Arial, Helvetica, sans-serif;}
 
+@font-face {
+	font-family: batman;
+	src:url(../fonts/batmfa__.ttf);
+}
+
+
 /* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
@@ -17,9 +23,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 
 /* Modal Content */
 .modal-content {
+    height: 90%;
     position: relative;
     background-color: #fefefe;
-    margin: auto;
+    margin: -5% auto;
     padding: 0;
     border: 1px solid #888;
     width: 50%;
@@ -62,7 +69,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
     color: white;
 }
 
-.modal-body {padding: 32px 20px;}
+.modal-body {
+    padding: 50px 0;
+    height: 95%;
+}
 
 .modal-footer {
     padding: 2px 16px;
@@ -84,11 +94,13 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
-#cambiaso{
 
+#cambiaso{
+    height: 95%;
 }
 
 .form{
+    height: 95%;
     width:100%;
     margin:auto;
     background: white;
@@ -97,22 +109,29 @@ tr:nth-child(even) {
 }
 
 .form-titulo{
-    height: 70px;
+    font-family: batman;
+    height: 55px;
     color:black;
     font-size: 2.25rem;
     text-align: center;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+    margin:0;
 }
+
+.bio-field{
+    width: 100%!important;
+}
+
 
 .form-text{
     font-size: 1em;
-    width: 43%;
-    height: 15%;
-    margin-bottom: 15px;
-    padding:15px;
-    border-radius: 3px;
-    border: 1px solid gray;
+    width: 100%;
+    padding:15px 0;
+    border-left: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    border-bottom: 1px solid gray;
 }
 
 #bio{
@@ -121,20 +140,23 @@ tr:nth-child(even) {
 
 
 .form-button{
-    height: 50px;
+    font-family: batman;
+    margin-top:20px;
+    height: 90px;
     width: 100%;
     text-align: center;
-    background: #229954;
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
+    background: #4aea2a;
+    color: white;
+    font-size: 1.75em;
 }
 
 .form-button:hover{
     cursor:pointer;
-    background: #2E4053;
+    background: #00ff2a;
 }
 
 .form-container{
+    height: 80%;
     padding: 20px 30px;
     display:flex;
     flex-wrap: wrap;
@@ -146,4 +168,95 @@ tr:nth-child(even) {
     width:200px;
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
+}
+
+.field{
+    width: 48%;
+    display:flex;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+label , input {
+    transition: all 0.3s;
+    touch-action: manipulation;
+}
+
+input{
+    -webkit-appearance: none;
+}
+
+input:focus{
+    outline:0;
+    border-bottom: 3px solid #00ff2a;
+}
+
+input:placeholder-shown + label {
+    cursor: pointer;
+    max-width: 66.6%;
+    white-space: nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 2.125rem) scale(1.2);
+}
+
+::-webkit-input-placeholder{
+    opacity: 0;
+    transition: inherit;
+}
+
+label {
+    opacity: .5;
+}
+
+input:focus::-webkit-input-placeholder{
+    opacity:0;
+}
+
+input:not(:placeholder-shown) + label,
+input:focus + label{
+    transform: translate(0,0) scale(1);
+    cursor: pointer;
+}
+
+@media screen and (min-width:574px){
+    .modal-content{
+        width:90%;
+        top:-20px;
+        height: 100%;
+    }
+}
+
+
+@media screen and (min-width:768px){
+    .modal-content{
+        width:65%;
+        top: -30px;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:992px){
+    .modal-content{
+        width:55%;
+        top:-40px;
+        height: 95%;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .modal-content{
+        width:50%;
+        height: 90%;
+        top:5px;
+    }
+}
+
+@media screen and (min-width:1200px) and (max-height: 645px){
+    .modal-content{
+        width:50%;
+        height: 93%;
+        top: -5px;
+    }
 }

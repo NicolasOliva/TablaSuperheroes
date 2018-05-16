@@ -16,13 +16,41 @@ window.ShowModal = () =>{
     <form id="formulario" class="form" action="" name="formulario" method="post">
     <h2 class="form-titulo form-titulo1">Crea tu propio Heroe</h2>
     <div class="form-container">
-            <input type="text" class="form-text"  name="nombre" placeholder="Name" id="nombre">
-            <input type="text" class="form-text"  name="alias" placeholder="Alias" id="alias" >
-            <input type="text" class="form-text"  name="universe" placeholder="Universe" id="universe">
-            <input type="text" class="form-text"  name="enemigos" placeholder="Enemy" id="enemigos">
-            <input type="text" class="form-text"  name="enemigos" placeholder="Photo" id="foto">
-            <input type="text" class="form-text"  name="enemigos" placeholder="Romance" id="romance">
-            <input type="text" class="form-text" name="bio" placeholder="Biography" id="bio" >
+            <div class="field">
+                <input type="text" class="form-text"  name="nombre" placeholder="Name" id="nombre">
+                <label for="nombre">Name</label>
+            </div>
+
+            <div class="field">
+                <input type="text" class="form-text"  name="alias" placeholder="Alias" id="alias" >
+                <label for="alias">Alias</label>
+            </div>
+
+            <div class="field">
+                <input type="text" class="form-text"  name="universe" placeholder="Universe" id="universe">
+                <label for="universe">Universe</label>
+            </div>
+
+            <div class="field">
+                <input type="text" class="form-text"  name="nemesis" placeholder="Nemesis" id="enemigos">
+                <label for="enemigos">Nemesis</label>
+            </div>
+
+            <div class="field">
+                <input type="text" class="form-text"  name="foto" placeholder="Photo" id="foto">
+                <label for="foto">Photo</label>
+            </div>
+
+            <div class="field">
+                <input type="text" class="form-text"  name="romance" placeholder="Romance" id="romance">
+                <label for="romance">Romance</label>
+            </div>
+
+            <div class="field bio-field">
+                <input type="text" class="form-text" name="bio" placeholder="Biography" id="bio" >
+                <label for="bio">Biography</label>
+            </div>
+
             <input type="button" class="form-button" value="Crear Heroe" id="btn" onclick="creation();">
             
         </div>
@@ -32,15 +60,6 @@ window.ShowModal = () =>{
     modal.innerHTML = htmlTemplate;
     ShowModal();
 }
-
-
-//para editar dependiendo su modal
-// window.mimodal = () => {
-//     // pisar estilo del id="Cambiaso" del index.html
-//    ShowModal();
-// }
-
-
 
 const view = (viewHeroes) =>{
     let htmlTemplate = `                        
