@@ -31,14 +31,14 @@ const view = (viewHeroes) =>{
          htmlTemplate += `
             <tbody>
                 <tr class="data">
-                    <td><a href="#" onclick="funcionsera(${viewHeroes.id})">${viewHeroes.nombre}</a></td>
+                    <td><a href="#" onclick="ShowModal()(${viewHeroes.id})">${viewHeroes.nombre}</a></td>
                     <td>${viewHeroes.alias}</td>
                     <td>${viewHeroes.bio}</td>
                     <td>${viewHeroes.universo}</td>
                     <td>${viewHeroes.nemesis}</td>
                     <td><img src="${viewHeroes.foto}" alt="Smiley face" height="42" width="42"></td>
                     <td>${viewHeroes.romance}</td>
-                    <td><button class="btn" onclick=borrarHeroe(${viewHeroes.id})><span><i class="fas fa-edit"></i></span></button><button onclick=borrarHeroe(${viewHeroes.id})>Borrar</button></td>
+                    <td><button class="btn" onclick=borrarHeroe(${viewHeroes.id})><span><i class="fas fa-edit"></i></span></button><button alt="Borrar" class="btn-del" onclick=borrarHeroe(${viewHeroes.id})><span><i class="far fa-trash-alt"></i></span></button></td>
                 </tr> 
             </tbody>
             `;
