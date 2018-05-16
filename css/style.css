@@ -172,7 +172,7 @@ tbody tr:nth-child(even) {
     margin: auto;
     padding: 0;
     border: 1px solid #888;
-    width: 80%;
+    width: 50%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -212,13 +212,14 @@ tbody tr:nth-child(even) {
     color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {padding: 32px 20px;}
 
 .modal-footer {
     padding: 2px 16px;
     background-color: #5cb85c;
     color: white;
 }
+
 /*Media Querys*/
 @media screen and (max-width: 600px) {
     table {
@@ -245,3 +246,82 @@ tbody tr:nth-child(even) {
         text-align:center;
     }
 }
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+#cambiaso{
+
+}
+
+.form{
+    width:100%;
+    margin:auto;
+    background: white;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+.form-titulo{
+    height: 70px;
+    color:black;
+    font-size: 2.25rem;
+    text-align: center;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.form-text{
+    font-size: 1em;
+    width: 43%;
+    height: 15%;
+    margin-bottom: 15px;
+    padding:15px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+#bio{
+    width: 100%;
+}
+
+
+.form-button{
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    background: #229954;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.form-button:hover{
+    cursor:pointer;
+    background: #2E4053;
+}
+
+.form-container{
+    padding: 20px 30px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.crearnuevo{
+    width:200px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+

@@ -1,6 +1,6 @@
 import Api from '../lib/api.js'
 import App from './app.js'
-const borrarHeroe = (id)=>{
+const Delete = (id)=>{
     console.log('el id es',id)
 
     Api("GET","data.json")//a futuro cambiar a DELETE
@@ -9,7 +9,6 @@ const borrarHeroe = (id)=>{
             console.log(hero)
             hero.forEach((element,index)=>{
                 if(element.id == id){
-                    console.log('vot a borrar a ',element.nombre,'en el index ', index)
                     hero.splice(index ,1)
                     
                 }
@@ -28,4 +27,4 @@ const borrarHeroe = (id)=>{
 
 
 
-export default borrarHeroe;
+export default Delete;
