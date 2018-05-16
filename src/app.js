@@ -19,18 +19,18 @@ window.borrarHeroe = borrarHeroe;
 
 const view = (viewHeroes) =>{
     let htmlTemplate = `                        
-        <th>Nombre</th>
-        <th>Alias</th>
-        <th>Bio</th>
-        <th>Universo</th>
-        <th>Némesis</th>
-        <th>Foto</th>
-        <th>Romance</th>
-        <th>Accion</th>`;
+        <th class="title">Nombre</th>
+        <th class="title">Alias</th>
+        <th class="title">Bio</th>
+        <th class="title">Universo</th>
+        <th class="title">Némesis</th>
+        <th class="title">Foto</th>
+        <th class="title">Romance</th>
+        <th class="title">Accion</th>`;
     viewHeroes.forEach((viewHeroes)=>{
          htmlTemplate += `
             <tbody>
-                <tr>
+                <tr class="data">
                     <td><a href="#" onclick="funcionsera(${viewHeroes.id})">${viewHeroes.nombre}</a></td>
                     <td>${viewHeroes.alias}</td>
                     <td>${viewHeroes.bio}</td>
