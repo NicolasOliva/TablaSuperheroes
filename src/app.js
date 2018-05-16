@@ -38,7 +38,7 @@ const view = (viewHeroes) =>{
                     <td>${viewHeroes.nemesis}</td>
                     <td><img src="${viewHeroes.foto}" alt="Smiley face" height="42" width="42"></td>
                     <td>${viewHeroes.romance}</td>
-                    <td><button onclick=borrarHeroe(${viewHeroes.id})>Editar</button><button onclick=borrarHeroe(${viewHeroes.id})>Borrar</button></td>
+                    <td><button class="btn" onclick=borrarHeroe(${viewHeroes.id})><span><i class="fas fa-edit"></i></span></button><button onclick=borrarHeroe(${viewHeroes.id})>Borrar</button></td>
                 </tr> 
             </tbody>
             `;
