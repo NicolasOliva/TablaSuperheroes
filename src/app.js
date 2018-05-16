@@ -17,6 +17,7 @@ window.borrarHeroe = borrarHeroe;
 
 
 
+
 const view = (viewHeroes) =>{
     let htmlTemplate = `                        
         <th class="title">Nombre</th>
@@ -31,7 +32,7 @@ const view = (viewHeroes) =>{
          htmlTemplate += `
             <tbody>
                 <tr class="data">
-                    <td><a href="#" onclick="ShowModal()(${viewHeroes.id})">${viewHeroes.nombre}</a></td>
+                    <td><a href="#" onclick="FullInfo(${viewHeroes.id})">${viewHeroes.nombre}</a></td>
                     <td>${viewHeroes.alias}</td>
                     <td>${viewHeroes.bio}</td>
                     <td>${viewHeroes.universo}</td>
