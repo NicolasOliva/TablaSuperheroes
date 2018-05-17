@@ -1,6 +1,6 @@
 
 const editForm = `
-    <form id="formulario" class="form" action="" name="formulario" method="post">
+    <div id="formulario" class="form" action="" name="formulario">
         <h2 class="form-titulo form-titulo1">Crea tu propio Heroe</h2>
         <div class="form-container">
             <input type="text" class="form-text"  name="id" id="id" style="display:none;">
@@ -40,5 +40,5 @@ const editForm = `
             </div>
             <input type="button" class="form-button" value="EDITAR" id="btn" onclick="editDataHero()">  
         </div>
-    </form> `;
+    </div> `;
 export default editForm;

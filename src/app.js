@@ -24,28 +24,30 @@ window.editHero = (id) =>{
 }
 
 
+
 const view = (viewHeroes) =>{
     let htmlTemplate = `                        
-        <th>Nombre</th>
-        <th>Alias</th>
-        <th>Bio</th>
-        <th>Universo</th>
-        <th>Némesis</th>
-        <th>Foto</th>
-        <th>Romance</th>
-        <th>Accion</th>`;
+        <th class="title">Nombre</th>
+        <th class="title">Alias</th>
+        <th class="title">Bio</th>
+        <th class="title">Universo</th>
+        <th class="title">Némesis</th>
+        <th class="title">Foto</th>
+        <th class="title">Romance</th>
+        <th class="title">Accion</th>`;
     viewHeroes.forEach((viewHeroes)=>{
          htmlTemplate += `
             <tbody>
-                <tr>
-                    <td><a href="#" onclick="funcionsera(${viewHeroes.id})">${viewHeroes.nombre}</a></td>
+                <tr class="data">
+                    <td><a href="#" onclick="FullInfo(${viewHeroes.id})">${viewHeroes.nombre}</a></td>
                     <td>${viewHeroes.alias}</td>
                     <td>${viewHeroes.bio}</td>
                     <td>${viewHeroes.universo}</td>
                     <td>${viewHeroes.nemesis}</td>
                     <td><img src="${viewHeroes.foto}" alt="Smiley face" height="42" width="42"></td>
                     <td>${viewHeroes.romance}</td>
-                    <td><button onclick=editHero(${viewHeroes.id})>Editar</button><button onclick=Delete(${viewHeroes.id})>Borrar</button></td>
+                    <td><button class="btn" onclick=editHero(${viewHeroes.id})><span><i class="fas fa-edit"></i></span></button><button alt="Borrar" class="btn-del" onclick=Delete(${viewHeroes.id})><span><i class="far fa-trash-alt"></i></span></button></td>
+
                 </tr> 
             </tbody>
             `;

@@ -1,5 +1,5 @@
 const htmlTemplate = `
-    <form id="formulario" class="form" action="" name="formulario" method="post">
+    <div id="formulario" class="form" action="" name="formulario">
         <h2 class="form-titulo form-titulo1">Crea tu propio Heroe</h2>
         <div class="form-container">
             <div class="field">
@@ -38,5 +38,5 @@ const htmlTemplate = `
             </div>
             <input type="button" class="form-button" value="CREAR" id="btn" onclick="creation();">  
         </div>
-    </form> `;
+    </div> `;
 export default htmlTemplate;
