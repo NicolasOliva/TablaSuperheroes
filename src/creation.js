@@ -2,18 +2,6 @@ import Api from '../lib/api.js'
 import App from './app.js'
 // FUNCION PARA BORRAR HEROES ==========>
 
-
-
-//FIN FUNCION PARA BORRAR HEROES
-
-
-
-
-
-
-/*FUNCION PARA CREAR UN HEROE , LUEGO DE CARGADO SE EJECUTARA LA SEGUNDA FUNCION QUE LO AGREGARA AL ARRAY HERO
-O AL JSON UNA VES LO TENGAMOS====================================>  */
-
 const creation = (hero)=>{
     Api("GET","data.json")
     .then((hero) => {
