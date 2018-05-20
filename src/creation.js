@@ -30,11 +30,10 @@ const creation = (hero)=>{
             }
             if(hero.indexOf(newHero) === -1){
                 hero.push(newHero);
-            } else{
-                alert('Ese heroe ya existe!')
             }
         }
         App(hero)
+        document.getElementById('myModal').style.display = "none";
     }
     })
     .catch((error) =>{

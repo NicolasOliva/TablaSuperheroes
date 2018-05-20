@@ -52,7 +52,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 .close {
     color: white;
     float: right;
-    font-size: 28px;
+    font-size: 50px;
     font-weight: bold;
 }
 
@@ -178,25 +178,28 @@ tr:nth-child(even) {
     margin-bottom: 1em;
 }
 
-label , input {
+label , .input {
     transition: all 0.3s;
     touch-action: manipulation;
 }
 
-input{
+.input{
     -webkit-appearance: none;
 }
 
-input:focus{
+textarea{
+    resize: none;
+}
+
+.input:focus{
     outline:0;
     border-bottom: 3px solid #00ff2a;
 }
 
-input:placeholder-shown + label {
+.input:placeholder-shown + label {
     cursor: pointer;
     max-width: 66.6%;
     white-space: nowrap;
-    overflow:hidden;
     text-overflow:ellipsis;
     transform-origin: left bottom;
     transform: translate(0, 2.125rem) scale(1.2);
@@ -211,12 +214,12 @@ label {
     opacity: .5;
 }
 
-input:focus::-webkit-input-placeholder{
+.input:focus::-webkit-input-placeholder{
     opacity:0;
 }
 
-input:not(:placeholder-shown) + label,
-input:focus + label{
+.input:not(:placeholder-shown) + label,
+.input:focus + label{
     transform: translate(0,0) scale(1);
     cursor: pointer;
 }
