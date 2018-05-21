@@ -4,30 +4,32 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- FONTS LINKS -->
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">        
+        <!-- CSS LINKS -->
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/fontawesome-all.css">
         <title>Tabla de superheroes</title>
     </head>
     <body>
         <div>TITULO HEROES</div>
-
+        
         <!-- The Modal -->
         <div id="myModal" class="modal">
 
-        <!-- Modal content -->
-        <div class="modal-content">
-            <div class="modal-header">
-            <span class="close">&times;</span>
-
-            </div>
-            <div id="Cambiaso" class="modal-body"> <!-- ACA CAMBIAS LO QUE SE NECESITA DEL MODAL -->
-            <p>TEXTO ACA PARA CAMBIAR</p>
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                </div>
+                <div id="Cambiaso" class="modal-body"> <!-- ACA CAMBIAS LO QUE SE NECESITA DEL MODAL -->
+                    <p>TEXTO ACA PARA CAMBIAR</p>
+                </div>
             </div>
         </div>
-
-        </div>
-        <div><button class="crearnuevo form-button" id="creation" onclick="ShowModal();">Crear Heore</button></div>
-        <div>
-            <table id="table">
+        <div><button id="creation" onclick="createHero();" class="btn"><span>Crear Heroe</span></button></div>
+        <div id="table-container" class="shadow-z-1">
+            <table id="table" class="table-hover table-striped table-bordered table-condensed">
             </table>
         </div>
         <script src="/build/app.bundle.js"></script>

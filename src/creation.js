@@ -1,6 +1,6 @@
 import Api from '../lib/api.js'
 import App from './app.js'
-// FUNCION PARA BORRAR HEROES ==========>
+
 
 const creation = (hero)=>{
     Api("GET","data.json")
@@ -45,6 +45,3 @@ const creation = (hero)=>{
 
 export default creation
 
-//FIN FUNCION PARA CREAR UN HEROE============================================================================
-/*FUNCION PARA CARGAR EL NUEVO HEROE AL ARRAY HERO , CUANDO TENGAMOS EL JSON SE ENCARAGARA DE CARGARLO AL MISMO
-================================>  */
