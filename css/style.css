@@ -8,7 +8,7 @@ a{
 }
 /*Table Styles*/
 table {
-    font-family: 'Raleway', sans-serif;    
+    font-family: 'Raleway', sans-serif;
     border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
@@ -18,7 +18,7 @@ table {
     padding: 20px;
     background: #4CAF50;
     color: white;
-    
+
 }
 td, th {
     border-bottom: 1px solid #8080804f;
@@ -80,11 +80,11 @@ tbody tr:nth-child(even) {
 .btn-del:hover, .btn-del:focus {
     background-color: rgba(183, 28, 28, 0.322);
 }
-  
+
   .btn > * {
     position: relative;
 }
-  
+
   .btn span {
     display: block;
     padding: 12px 24px;
@@ -93,22 +93,22 @@ tbody tr:nth-child(even) {
     display: block;
     padding: 12px 24px;
 }
-  
+
   .btn:before {
     content: "";
-    
+
     position: absolute;
     top: 50%;
     left: 50%;
-    
+
     display: block;
     width: 0;
     padding-top: 0;
-      
+
     border-radius: 100%;
-    
+
     background-color: rgba(236, 240, 241, .3);
-    
+
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -117,36 +117,36 @@ tbody tr:nth-child(even) {
 }
 .btn-del:before {
     content: "";
-    
+
     position: absolute;
     top: 50%;
     left: 50%;
-    
+
     display: block;
     width: 0;
     padding-top: 0;
-      
+
     border-radius: 100%;
-    
+
     background-color: rgba(236, 240, 241, .3);
-    
+
     -webkit-transform: translate(-50%, -50%);
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
-  
+
 .btn:active:before {
     width: 120%;
     padding-top: 120%;
-    
+
     transition: width .2s ease-out, padding-top .2s ease-out;
 }
 .btn-del:active:before {
     width: 120%;
     padding-top: 120%;
-    
+
     transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
@@ -189,7 +189,7 @@ tbody tr:nth-child(even) {
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
-    from {top:-300px; opacity:0} 
+    from {top:-300px; opacity:0}
     to {top:0; opacity:1}
 }
 
@@ -437,4 +437,21 @@ input:focus + label{
         height: 93%;
         top: -5px;
     }
+}
+
+.banner-video {
+  min-width: 100%;
+  height: 380px;
+  background-color: black;
+}
+
+footer{
+  text-align: center;
+  background-color: grey;
+}
+
+.redes-sociales{
+  font-size: 25px;
+  margin-left: 20px;
+  margin: 70px;
 }

@@ -3,7 +3,7 @@ import App from './app.js'
 
 
 
-const BuscarID = (id) => {  
+const BuscarID = (id) => {
     Api("GET","data.json")
         .then((heroes) => {
             if(heroes){
@@ -23,7 +23,7 @@ const BuscarID = (id) => {
 }
 
 const MostrarHeroe = (heroe) => {
-  //se le pasa el heroe que se desea mostrar
+
     document.getElementById('id').value = heroe.id;
     document.getElementById('nombre').value = heroe.nombre;
     document.getElementById('alias').value = heroe.alias;
@@ -35,16 +35,22 @@ const MostrarHeroe = (heroe) => {
 
 const ObtenerDatosForm = () => {
 
-    let heroe = {
-        id : parseInt(document.getElementById('id').value),
-        nombre : document.getElementById('nombre').value,
-        alias : document.getElementById('alias').value,
-        bio : document.getElementById('bio').value,
-        universo : document.getElementById('universe').value,
-        nemesis : document.getElementById('enemigos').value,
-        romance : document.getElementById('romance').value
+    let id = parseInt(document.getElementById('id').value);
+    let nombre = document.getElementById('nombre').value;
+    let alias = document.getElementById('alias').value;
+    let bio = document.getElementById('bio').value;
+    let universo = document.getElementById('universe').value;
+    let nemesis = document.getElementById('enemigos').value;
+    let romance = document.getElementById('romance').value;
+
+    if(nombre == "" || alias == "" || bio == "" || universo == "" || nemesis == "" || romance == ""){
+      alert("Debe completar todos los campos");
+      return false;
+    }else {
+      let heroe = {id,nombre,alias,bio,universo,nemesis,romance};
+      return heroe;
     }
-    return heroe;
+
 }
 
 const EditarHeroe = () => {
