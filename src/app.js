@@ -6,11 +6,36 @@ import Delete from './delete'
 import htmlTemplate from '../views/createModal.js'
 import editForm from '../views/editModal.js'
 
-window.Delete = Delete;
-
 window.editDataHero = editDataHero.EditarHeroe 
 
 window.creation = creation;
+
+window.info = (nombre,foto1, info1 ,foto2, info2 ,foto3, info3)=>{
+    let modal = document.getElementById('cambiaso');
+    const htmlTemplate = `
+    <div>
+        <h2>${nombre}</h2>
+    </div>
+    <div>
+        <div>
+        <img src="${foto1}"></img>
+        <p>${info1}</p>
+        </div>
+        <div>
+        <p>${info2}</p>
+        <img src="${foto2}"></img>
+        </div>
+        <img src="${foto3}"></img>
+        <p>${info3}</p>
+        <div
+        ></div>
+    </div>
+    `;
+
+    modal.innerHTML = htmlTemplate;
+    ShowModal();
+}
+
 
 window.createHero = () =>{
     let modal = document.getElementById('Cambiaso');
@@ -41,12 +66,12 @@ const view = (viewHeroes) =>{
          htmlTemplate += `
             <tbody>
                 <tr class="data">
-                    <td class="nombre"><a href="#" onclick="FullInfo(${viewHeroes.id})">${viewHeroes.nombre}</a></td>
+                    <td class="nombre"><a href="#" onclick="info(${viewHeroes.nombre},${viewHeroes.foto[1]},${viewHeroes.informacion[0]},${viewHeroes.foto[2]},${viewHeroes.informacion[1]},${viewHeroes.foto[3]},${viewHeroes.informacion[2]})">${viewHeroes.nombre}"</a></td>
                     <td class="alias">${viewHeroes.alias}</td>
                     <td class="bio">${viewHeroes.bio}</td>
                     <td class="universe">${viewHeroes.universo}</td>
-                    <td class="nemesis">${viewHeroes.nemesis}</td>
-                    <td class="foto"><img src="${viewHeroes.foto}" alt="Smiley face" height="42" width="42"></td>
+                    <td class="nemesis">${viewHeroes.nemesis[0]}</td>
+                    <td class="foto"><img src="${viewHeroes.foto[0]}" alt="Smiley face" height="42" width="42"></td>
                     <td class="romance">${viewHeroes.romance}</td>
                     <td class="botones">
                     <button class="btn" onclick=editHero(${viewHeroes.id})><span><i class="fas fa-edit"></i></span></button>

@@ -5,9 +5,12 @@
         "alias" : "Bruce Wayne",
         "bio" : "Sus padres fueron asesinados delante de el cuando era un niño. A partir de ese día decidió vivir para combatir al crimen organizado y descubrir quien fue el asesino de sus padres",
         "universo" : "DC",
-        "nemesis" : "Guasón",
-        "foto" : "https://png.icons8.com/color/1600/batman.png",
-        "romance" : "Gatúbela"
+        "nemesis" : ["Joker","Scarecrow","Dos caras","..."],
+        "foto" : ["https://png.icons8.com/color/1600/batman.png", "https://vignette.wikia.nocookie.net/marvelcrossroads/images/d/d0/Dick_Grayson_Batman_%285029%29.jpg/revision/latest?cb=20140601071652","https://vignette.wikia.nocookie.net/marvel_dc/images/1/1f/Batman_Dick_Grayson_0071.jpg/revision/latest?cb=20121220133210","https://static.vix.com/es/sites/default/files/styles/large/public/btg/comics.batanga.com/files/La-Familia-Batman-34.jpg?itok=Fq81tRRH"],
+        "romance" : "Gatúbela",
+        "informacion" :["El multimillonario filántropo, Thomas Wayne, su esposa, Martha junto a su hijo de 8 años, Bruce Wayne, estaban saliendo de un cine una noche cuando se dirigieron hacia Park Row. De repente, un matón llamado Joe Chill armado con una pistola se acercó hacia ellos desde las sombras para robar el collar de perlas que Martha llevaba. Con Bruce viendo todo, Chill disparó y mató a Thomas Wayne a sangre fría cuando este protegió a su esposa y luego Martha también fue asesinada mientras gritaba por ayuda. Bruce quedó severamente traumatizado por la muerte de sus padres. Ya nunca más sería el mismo. Después de ser criado por su sabio y leal mayordomo Alfred Pennyworth, Bruce heredó la gran fortuna de su familia, así también la compañía de su padre, Wayne Enterprises. Una noche, de pie ante las tumbas de sus padres, Bruce les hizo un solemne juramento de vengar sus muertes.",
+            "Bruce volvió a Ciudad Gótica, donde se convirtió en un justiciero. Pero a pesar de todas sus habilidades afinadas, sabía que algo le faltaba. Bruce quería que los delincuentes fueran 'muy supersticiosos y cobardes', y con el fin de liberar a su ciudad del mal, tuvo que convertirse en un símbolo tan aterrador que le permitiera infundir el miedo en los corazones de los criminales. Una noche, en el estudio de su padre, un gran murciélago pasó a través de la ventana. Bruce vio esto como un presagio y recordó su miedo hacia los murciélagos cuando era niño. Entonces supo que ese iba a ser su símbolo, el Murciélago lo ayudaría a infundir terror en los bajos fondos de Gótica. Haciendo uso de su riqueza, Bruce diseñó un traje y todo el equipo complementario, comenzando así una doble vida: durante el día, él sería el playboy multimillonario y hombre de negocios, Bruce Wayne; de noche, sería el Caballero de Noche, Batman.",
+            "Tiempo después Batman atestiguo de la muerte de los Grayson voladores, unos acrobatas de circo que fueron asesinados por los mafiosos luego de que el dueño del circo se negara a pagarle a la mafia 'dinero por protección'. Bruce adopta al joven Dick Grayson como su protegido y lo entrena para ser su compañero, Robin.Bruce y Dick logran perseguir y derrotar a Tony Zucco, el jefe mafioso responsable de la muerte de John y Mary Grayson. Nunca se dijo por qué Bruce adopto a Dick, pero quizás fue porque Dick perdió a sus padres muy de joven al igual que Bruce. Juntos, el 'Dúo Dinámico'  se enfrentaron contra muchos enemigos, como El Acertijo, El Espantapajaros, El Pingüino y El Joker. "]
     },
     {
         "id" : 2,
@@ -15,9 +18,10 @@
         "alias" : "Peter Parker",
         "bio" : "Fue picado por una araña y ahora posee habilidades arácnidas",
         "universo" : "Marvel",
-        "foto" : "https://orig00.deviantart.net/3bd9/f/2017/183/0/7/spider_man_homecoming_icon_by_xanisu-dbete4j.png",
-        "nemesis" : "Duende verde",
-        "romance" : "Mary Jane"
+        "foto" : ["https://orig00.deviantart.net/3bd9/f/2017/183/0/7/spider_man_homecoming_icon_by_xanisu-dbete4j.png"],
+        "nemesis" : ["Duende verde","Venom","Kraven","..."],
+        "romance" : "Mary Jane",
+        "informacion" :["","",""]
     },
     {
         "id" : 3,
@@ -25,9 +29,10 @@
         "alias" : "Albert Francis Simmons",
         "bio" : "Un Hellspawn es un demonio de naturaleza simbiótica creado con el objetivo a largo plazo de encontrar un comandante perfecto para las tropas del infierno, para enfrentarse a las tropas del cielo en el próximo armagedón.",
         "universo" : "DC",
-        "nemesis" : "Mafia italiana",
-        "foto" : "https://png.icons8.com/color/1600/spawn.png",
-        "romance" : "Wanda"
+        "nemesis" : ["Clown/Violator","Malebolgia","Mafia italiana","..."],
+        "foto" :["https://png.icons8.com/color/1600/spawn.png"],
+        "romance" : "Wanda",
+        "informacion" :["","",""]
     },
     {
         "id" : 4,
@@ -35,9 +40,10 @@
         "alias" : "Clark Kent",
         "bio" : "nació con el nombre de Kal-El en el planeta Krypton; su padre, el científico Jor-El, y su madre Lara Lor-Van, lo enviaron en una nave espacial con destino a la Tierra cuando era un niño, momentos antes de la destrucción de su planeta.",
         "universo" : "DC",
-        "foto" : "http://webiconspng.com/wp-content/uploads/2017/09/Superman-PNG-Image-94012.png",
-        "nemesis" : "Lex Luthor",
-        "romance" : "Lois Lane"
+        "foto" : ["http://webiconspng.com/wp-content/uploads/2017/09/Superman-PNG-Image-94012.png"],
+        "nemesis" : ["Lex Luthor"],
+        "romance" : "Lois Lane",
+        "informacion" :["","",""]
     },
     {
         "id" : 5,
@@ -45,9 +51,10 @@
         "alias" : "Jay Garrick",
         "bio" : "Jay Garrick era un estudiante universitario en 1938 que accidentalmente inhaló vapores de agua pesada después de tomar un descanso para fumar dentro de su laboratorio donde había estado trabajando. Como resultado, descubrió que podía correr a una velocidad sobrehumana y que tenía reflejos igualmente rápidos.",
         "universo" : "DC",
-        "foto" : "https://png.icons8.com/metro/1600/the-flash-head.png",
-        "nemesis" : "Weather Wizard",
-        "romance" : "Dale Arden" 
+        "foto" : ["https://png.icons8.com/metro/1600/the-flash-head.png"],
+        "nemesis" : ["Weather Wizard","Reverse Flash","..."],
+        "romance" : "Dale Arden" ,
+        "informacion" :["","",""]
     },
     {
         "id" : 6,
@@ -55,8 +62,9 @@
         "alias" : "T'Challa",
         "bio" : "T'Challa obtuvo el título y los atributos de la Pantera Negra al derrotar a los diversos campeones de las tribus de Wakanda. Uno de sus primeros actos fue disolver y exiliar a Hatut Zeraze, la policía secreta de Wakanda, y su líder, su hermano adoptivo Hunter el Lobo Blanco.",
        "universo" : "Marvel",
-       "foto" : "http://pluspng.com/img-png/black-panther-png-image-black-panther-png-marvel-cinematic-universe-wiki-fandom-powered-by-wikia-429.png",
-       "nemesis" : "Achebe",
-       "romance" : "Ororo Munroe/Tormenta" 
+       "foto" : ["http://pluspng.com/img-png/black-panther-png-image-black-panther-png-marvel-cinematic-universe-wiki-fandom-powered-by-wikia-429.png"],
+       "nemesis" : ["Achebe"],
+       "romance" : "Ororo Munroe/Tormenta" ,
+       "informacion" :["","",""]
     }
 ]

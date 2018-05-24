@@ -27,11 +27,26 @@
                 </div>
             </div>
         </div>
-        <div><button id="creation" onclick="createHero();" class="btn"><span>Crear Heroe</span></button></div>
+
+        <div id="myModal2" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content2">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                </div>
+                <div id="information" class="modal-body"> <!-- ACA CAMBIAS LO QUE SE NECESITA DEL MODAL -->
+                    <p>TEXTO ACA PARA CAMBIAR</p>
+                </div>
+            </div>
+        </div>
+
+        <div><button id="creation" onclick="createHero()" class="btn"><span>Crear Heroe</span></button></div>
         <div id="table-container" class="shadow-z-1">
             <table id="table" class="table-hover table-striped table-bordered table-condensed">
             </table>
         </div>
+        <div id="modal2"></div>
         <script src="/build/app.bundle.js"></script>
 
     </body>

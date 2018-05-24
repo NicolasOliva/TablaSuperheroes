@@ -3,7 +3,7 @@ import App from './app.js'
 
 const Delete = (id)=>{
     console.log('el id es',id)
-    Api("GET","data.json")//a futuro cambiar a DELETE
+    if(confirm('Estas seguro?')){Api("GET","data.json")//a futuro cambiar a DELETE
         .then((hero) => {
         if(hero){
             console.log(hero)
@@ -15,16 +15,7 @@ const Delete = (id)=>{
             })
             App(hero)
         }
-        })
-        .catch((error) =>{
-            alert("Error al buscar la informacion");
-        })
-
-    return confirm('')
-
+        })}
 };
-
-
-
 
 export default Delete;
