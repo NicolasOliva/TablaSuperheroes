@@ -6,38 +6,74 @@ import Delete from './delete'
 import htmlTemplate from '../views/createModal.js'
 import editForm from '../views/editModal.js'
 
-window.editDataHero = editDataHero.EditarHeroe 
+window.Delete = Delete
 
-window.creation = creation;
+window.editDataHero = editDataHero.EditarHeroe
 
-window.info = (nombre,foto1, info1 ,foto2, info2 ,foto3, info3)=>{
-    let modal = document.getElementById('cambiaso');
+window.creation = creation
+
+window.info =(id)=>{
+    Api("GET","data.json")
+        .then((heroes) => {
+            if(heroes){
+                heroes.forEach((element) => {
+                    if(element.id == id){
+                        Mostrar(element);                       
+                  }
+                });
+            }
+        })
+        .catch((error) =>{
+            alert("Error al buscar la informacion");
+        })
+};
+
+
+const Mostrar = (heroe)=>{
+    let nombre = heroe.nombre;
+    let foto1 = heroe.foto[1];
+    let foto2 = heroe.foto[2];
+    let foto3 = heroe.foto[3];
+    let info1 = heroe.informacion[0];
+    let info2 = heroe.informacion[1];
+    let info3 = heroe.informacion[2];
+
     const htmlTemplate = `
-    <div>
-        <h2>${nombre}</h2>
-    </div>
-    <div>
-        <div>
-        <img src="${foto1}"></img>
-        <p>${info1}</p>
+    <div class="containerHeroe">
+        <div class="tituloHeroe">
+            <h2>${nombre}</h2>
         </div>
-        <div>
-        <p>${info2}</p>
-        <img src="${foto2}"></img>
+        <hr>
+
+        <div class="divHeroe">
+            <img  class="imgHeroe img1" src="${foto1}"></img>
+            <p class="textHeroe textH1">${info1}</p>
         </div>
-        <img src="${foto3}"></img>
-        <p>${info3}</p>
-        <div
-        ></div>
+
+        <div class="divHeroe">
+            <img  class="imgHeroe img2" src="${foto2}"></img>
+            <p class="textHeroe textH2">${info2}</p>
+        </div>     
+        <div class="divHeroe">
+            <img class="imgHeroe img1" src="${foto3}"></img>
+            <p class="textHeroe textH3">${info3}</p>
+        </div>
     </div>
     `;
 
+    const mymodal = document.getElementById('myModalContent');
+    mymodal.style.height = '220vh';
+    mymodal.style.width = '95vw';
+    
+    const modal = document.getElementById('Cambiaso');
     modal.innerHTML = htmlTemplate;
     ShowModal();
 }
 
-
 window.createHero = () =>{
+    const mymodal = document.getElementById('myModalContent');
+    mymodal.style.height = '600px';
+    mymodal.style.width = '600px';
     let modal = document.getElementById('Cambiaso');
     modal.innerHTML = htmlTemplate;
     ShowModal();
@@ -66,7 +102,7 @@ const view = (viewHeroes) =>{
          htmlTemplate += `
             <tbody>
                 <tr class="data">
-                    <td class="nombre"><a href="#" onclick="info(${viewHeroes.nombre},${viewHeroes.foto[1]},${viewHeroes.informacion[0]},${viewHeroes.foto[2]},${viewHeroes.informacion[1]},${viewHeroes.foto[3]},${viewHeroes.informacion[2]})">${viewHeroes.nombre}"</a></td>
+                    <td class="nombre"><a href="#" onclick=info(${viewHeroes.id})>${viewHeroes.nombre}</a></td>
                     <td class="alias">${viewHeroes.alias}</td>
                     <td class="bio">${viewHeroes.bio}</td>
                     <td class="universe">${viewHeroes.universo}</td>

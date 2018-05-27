@@ -426,6 +426,54 @@ label {
     cursor: pointer;
 }
 
+/*MODAL DE INFORMACION DE HEROES###############################################*/
+
+.containerHeroe hr{
+    margin: 0px 0px 50px 0px;
+}
+
+.divHeroe{
+    padding:10px;
+    height: 50vh;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.tituloHeroe{
+
+    font-size: 1.75rem;
+    text-align: center;
+    font-family: batman;
+    font-weight: bold;
+    margin-bottom: 10vh;
+}
+
+.containerHeroe{
+    padding: 10px 40px 50px 40px;
+    margin: 0 100px;
+    height: 218vh;
+    background: #f6f6f6;
+}
+.imgHeroe{
+    width: 300px;
+    height: 300px;
+}
+
+.img1{
+    float: left;
+    margin: 0 30px 30px 0;
+}
+
+.img2{
+    float:right;
+    margin: 0 0 30px 30px;
+}
+
+.textHeroe{
+    margin:0;
+    font-size: 1.4rem;
+}
+
 @media (max-width: 650px){ 
     .form-titulo{
         font-size: 1.7rem;

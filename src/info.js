@@ -1,5 +1,29 @@
-const info =(nombre,foto1, info1 ,foto2, info2 ,foto3, info3)=>{
-    let modal = document.getElementById('modal2');
+const info =(id)=>{
+    Api("GET","data.json")
+        .then((heroes) => {
+            if(heroes){
+                heroes.forEach((element) => {
+                    if(element.id == id){
+                        MostrarHeroe(element);                       
+                  }
+                });
+            }
+        })
+        .catch((error) =>{
+            alert("Error al buscar la informacion");
+        })
+};
+
+
+const MostrarHeroe = (heroe)=>{
+    let nombre = heroe.nombre;
+    let foto1 = heroe.foto[1];
+    let foto2 = heroe.foto[2];
+    let foto3 = heroe.foto[3];
+    let info1 = heroe.informacion[0];
+    let info2 = heroe.informacion[1];
+    let info3 = heroe.informacion[2];
+
     const htmlTemplate = `
     <div>
         <h2>${nombre}</h2>
@@ -20,6 +44,6 @@ const info =(nombre,foto1, info1 ,foto2, info2 ,foto3, info3)=>{
     </div>
     `;
 
+    const modal = document.getElementById('modal2');
     modal.innerHTML = htmlTemplate;
-    ShowModal();
 }
