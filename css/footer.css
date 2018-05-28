@@ -1,0 +1,81 @@
+@import url("fontello.css");
+@import url("fontawesome-all.css");
+
+footer{
+  background-color: #777777;
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+
+.envio-email{
+  width: 900px;
+  margin: auto;
+  background-color: rgba(0,0,0,0.4);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+footer h2{
+  color: #fff;
+  text-align: center;
+  margin: 5px;
+  font-size: 27px;
+  margin-bottom: 40px;
+}
+
+.input, .textarea {
+  width: 100%;
+  font-size: 19px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  padding: 7px;
+  box-sizing: border-box;
+  border: none;
+}
+
+.textarea{
+  min-height: 100px;
+  max-height: 200px;
+  max-width: 100%;
+}
+
+.btn-email{
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  padding: 0;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  font-size: 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+  background-color: #448AFF;
+  color: #ecf0f1;
+  transition: background-color .3s;
+  cursor: pointer;
+  padding: 11px 32px;
+  border-radius: 4px;
+}
+
+.btn-email:hover, .btn:focus {
+  background-color: #75A2EA;
+}
+
+footer p{
+  color: #fff;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.redes-sociales{
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.icon-facebook-squared, .icon-twitter, .icon-instagram{
+  color: #fff;
+}

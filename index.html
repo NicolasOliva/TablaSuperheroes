@@ -8,8 +8,10 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <!-- CSS LINKS -->
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/fontawesome-all.css">
-        <link rel="stylesheet" href="css/fontello.css">
+        <!-- EMAIL -->
+        <script src="https://smtpjs.com/v2/smtp.js"></script>
+        <script src="src/email.js"></script>
+
         <title>Tabla de superheroes</title>
     </head>
     <body>
@@ -42,14 +44,21 @@
 
     </body>
     <footer>
-       <div class="footer">
-         <script src="https://smtpjs.com/v2/smtp.js"></script>
-           <p class="copy">Marvel Studios &copy; 2018</p>
-           <div class="redes-sociales">
-               <a class="icon-facebook-squared" href="#"></a>
-               <a class="icon-twitter" href="#"></a>
-               <a class="icon-instagram" href="#"></a>
-           </div>
-       </div>
+      <div class="footer">
+        <div class="envio-email">
+            <h2>Contáctese con nosotros</h2>
+            <input type="text" class="input"  name="email" placeholder="Email" id="email">
+            <input type="password" class="input"  name="password" placeholder="Contraseña" id="password">
+            <input type="text" class="input"  name="asunto" placeholder="Asunto" id="asunto">
+            <textarea class="textarea" name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
+            <button type="button" class="btn-email" name="button" onclick="EnviarEmail();"> Enviar</button>
+        </div>
+        <p class="copy">Marvel Studios &copy; 2018 - Todos los derechos reservados</p>
+        <div class="redes-sociales">
+            <a class="icon-facebook-squared" href="#"></a>
+            <a class="icon-twitter" href="#"></a>
+            <a class="icon-instagram" href="#"></a>
+        </div>
+      </div>
     </footer>
 </html>
