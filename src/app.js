@@ -62,9 +62,11 @@ const Mostrar = (heroe)=>{
     `;
 
     const mymodal = document.getElementById('myModalContent');
-    mymodal.style.height = '220vh';
-    mymodal.style.width = '95vw';
-    
+    mymodal.style.height = '280vh';
+    mymodal.style.width = '90vw';
+    const header = document.getElementById('modal-header')
+    header.style.background="white";
+
     const modal = document.getElementById('Cambiaso');
     modal.innerHTML = htmlTemplate;
     ShowModal();
