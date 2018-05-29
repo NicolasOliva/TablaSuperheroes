@@ -1,3 +1,11 @@
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding:0;
+    margin:0;
+}
+
 body {
     font-family: 'Raleway', sans-serif;
     margin:0 5%;
@@ -8,6 +16,7 @@ a{
     font-weight: bold;
 }
 /*Table Styles//////////////////////////////////////////////////////////////////////////////////*/
+
 table {
     font-family: 'Raleway', sans-serif;    
     border-collapse: collapse;
@@ -41,14 +50,14 @@ tbody tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-/*.shadow-z-1 {
+.shadow-z-1 {
     -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.12),
                         0 1px 2px 0 rgba(0,0,0,.24);
     -moz-box-shadow:    0 1px 3px 0 rgba(0,0,0,.12),
                         0 1px 2px 0 rgba(0,0,0,.24);
     box-shadow:         11px 10px 9px 7px rgba(0,0,0,.12),
                         0px 0px 17px 0px rgba(0,0,0,.24);
-}*/
+}
 
 
 .btn {
@@ -159,11 +168,23 @@ tbody tr:nth-child(even) {
     transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
+@font-face{
+    font-family: masseffect;
+    src:url(../fonts/me123.ttf);
+}
+@font-face{
+    font-family: 'Coustard';
+    src:url(../fonts/Coustard-Regular.ttf)
+}
 @font-face {
 	font-family: batman;
 	src:url(../fonts/batmfa__.ttf);
 }
 
+@font-face{
+    font-family: 'Anton', sans-serif;
+    src:url(../fonts/Anton-Regular.ttf);
+}
 
 /* The Modal (background) */
 .modal {
@@ -224,6 +245,8 @@ tbody tr:nth-child(even) {
 
 /* The Close Button */
 .close {
+    position:relative;
+    z-index: 5;
     color: white;
     float: right;
     font-size: 50px;
@@ -232,6 +255,7 @@ tbody tr:nth-child(even) {
 
 .close:hover,
 .close:focus {
+    display: block;
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -428,31 +452,107 @@ label {
 
 /*MODAL DE INFORMACION DE HEROES###############################################*/
 
-.containerHeroe hr{
-    margin: 0px 0px 50px 0px;
+.divImgPrincipal{
+    float:right;
+    width: 400px;
+    height: 648px;
+    border: 1px solid black;
+}
+
+.infoHeroe {
+    font-size: 1.3rem;
+}
+
+.infoTable{
+    display:flex;
+    border-bottom: 1px solid #000;
+}
+.textHistory{
+    font-family: masseffect;
+}
+.infoTable h4{
+    font-family: 'Coustard';
+    padding: 10px 15px;
+    width: 45%;
+    font-size: 1.4rem!important;
+}
+
+.infoTable div{
+    font-family: Helvetica;
+    padding: 10px 0;
+    font-size: 1.4rem;
+}
+
+.superContainer{
+    margin-top:50px;
+}
+
+.divInfoPrincipal{
+    background: #D8D8D8;
+    width: 400px;
+    display: inline-block;
+}
+
+.divImgPrincipal .img3{
+    padding:10px;
+    border: 1px solid black;
+    width: 400px;
+    height: 600px;
+    background:#fff;
+}
+
+.divImgPrincipal h3 , .divInfoPrincipal h3{
+    padding:12px 0;
+    margin:0;
+    background: #000;
+    color: #fff;
+    font-size: 1.5rem;
+    font-family: batman;
+    text-align: center;
 }
 
 .divHeroe{
-    padding:10px;
-    height: 50vh;
+    padding:20px;
     display: inline-block;
     margin-bottom: 30px;
 }
 
-.tituloHeroe{
+.divHeroe h4{
+    display: inline-block;
+    font-size: 1.8rem;
+    padding-bottom: 50px;
+}
 
+.tituloHeroe{
+    padding-bottom: 50px;
+    margin: 0 10px;
+    width: 95%;
     font-size: 1.75rem;
-    text-align: center;
     font-family: batman;
     font-weight: bold;
-    margin-bottom: 10vh;
+    border-bottom: 2px solid rgba(0, 0 ,0, 0.7)
+}
+
+.containerHeroe2{
+    margin: 0 40px 10px 50px;
+    float:right;
+    width:400px;
 }
 
 .containerHeroe{
-    padding: 10px 70px 50px 70px;
-    height: 270vh;
-    overflow: hidden;
+    background: #A4A4A4;
+    position:relative;
+    top: -60px;
+    padding: 50px 10px 20px 50px;
 }
+
+.containerHeroe1{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    display:inline-block;
+}
+
 .imgHeroe{
     min-width: 250px;
     min-height: 250px;
@@ -462,17 +562,19 @@ label {
 
 .img1{
     float: left;
-    margin: 0 30px 30px 0;
+    margin:30px 30px 30px 0;
 }
 
 .img2{
     float:right;
-    margin: 0 0 30px 30px;
+    margin:30px 40px;
 }
 
 .textHeroe{
+    font-family: 'Anton', sans-serif; 
     margin:0;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    color: rgba(0, 0, 0, 0.6);
 }
 
 @media (max-width: 650px){ 
@@ -480,7 +582,7 @@ label {
         font-size: 1.7rem;
     }
     .modal-content{
-        width: 500px;
+        width: 500px!important;
     }
 }
 
@@ -489,7 +591,7 @@ label {
         font-size: 1.5rem;
     }
     .modal-content{
-        width: 450px;
+        width: 450px!important;
     }
 }
 

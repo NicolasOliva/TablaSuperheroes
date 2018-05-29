@@ -34,30 +34,79 @@ const Mostrar = (heroe)=>{
     let foto1 = heroe.foto[1];
     let foto2 = heroe.foto[2];
     let foto3 = heroe.foto[3];
+    let foto4 = heroe.foto[4];
     let info1 = heroe.informacion[0];
     let info2 = heroe.informacion[1];
     let info3 = heroe.informacion[2];
+    let info4 = heroe.informacion[3];
+    let enemigo1 = heroe.nemesis[0];
+    let enemigo2 = heroe.nemesis[1];
+    let enemigo3 = heroe.nemesis[2];
+    let alias = heroe.alias;
+    let romance = heroe.romance;
 
     const htmlTemplate = `
-    <div class="containerHeroe">
+    <div class="containerHeroe shadow-z-1">
         <div class="tituloHeroe">
             <h2>${nombre}</h2>
         </div>
-        <hr>
 
-        <div class="divHeroe">
-            <img  class="imgHeroe img1" src="${foto1}"></img>
-            <p class="textHeroe textH1">${info1}</p>
-        </div>
+    <div class="superContainer">
+        
+        <div class="containerHeroe1">
+            <div class="divHeroe">
+            <h4 class="textHistory">Historia</h4>
+                <div class="containerHeroe2">
+                    <div class="divImgPrincipal">
+                        <h3>${nombre}</h3>
+                        <img class="img3" src="${foto4}"></img>
+                    </div>
+                    <div class="divInfoPrincipal">
+                        <h3 class="">Informacion General</h3>
+                        <div>
+                            <div class="infoTable">
+                                <h4>Nombre Real </h4>
+                                <div>
+                                    <p>${alias}</p>
+                                </div>
+                            </div>
+                            <div class="infoTable">
+                                <h4>Enemigos </h4>
+                                <div class="enemigos">
+                                    <p>${enemigo1}</p>
+                                    <p>${enemigo2}</p>
+                                    <p>${enemigo3}</p>
+                                </div> 
+                            </div>
+                            <div class="infoTable">
+                                <h4>Romance </h4>
+                                <div>
+                                    <p>${romance}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="textHeroe textH1">${info1}</p>
+                <img  class="imgHeroe img1" src="${foto1}"></img>
+                <p class="textHeroe textH2">${info2}</p>
+                <img  class="imgHeroe img2" src="${foto2}"></img>
+                <p class="textHeroe textH3">${info3}</p>
+                
+            </div>
 
-        <div class="divHeroe">
-            <img  class="imgHeroe img2" src="${foto2}"></img>
-            <p class="textHeroe textH2">${info2}</p>
-        </div>     
-        <div class="divHeroe">
-            <img class="imgHeroe img1" src="${foto3}"></img>
-            <p class="textHeroe textH3">${info3}</p>
+            <div class="divHeroe">
+                
+            </div>  
+
+            <div class="divHeroe">
+                
+            </div>
+
         </div>
+       
+    </div>
     </div>
     `;
 
@@ -66,7 +115,8 @@ const Mostrar = (heroe)=>{
     mymodal.style.width = '90vw';
     const header = document.getElementById('modal-header')
     header.style.background="white";
-
+    const close = document.getElementById('close');
+    close.style.color = '#A4A4A4';
     const modal = document.getElementById('Cambiaso');
     modal.innerHTML = htmlTemplate;
     ShowModal();
