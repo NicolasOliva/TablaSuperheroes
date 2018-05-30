@@ -3,7 +3,8 @@ import App from './app.js'
 
 const Delete = (id)=>{
     console.log('el id es',id)
-    if(confirm('Estas seguro?')){Api("GET","data.json")//a futuro cambiar a DELETE
+   {
+       Api("GET","data.json")//a futuro cambiar a DELETE
         .then((hero) => {
         if(hero){
             console.log(hero)
@@ -14,6 +15,7 @@ const Delete = (id)=>{
                 }
             })
             App(hero)
+            document.getElementById('myModal').style.display = "none";
         }
         })}
 };

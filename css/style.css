@@ -167,7 +167,10 @@ tbody tr:nth-child(even) {
     
     transition: width .2s ease-out, padding-top .2s ease-out;
 }
-
+@font-face{
+    font-family: batmanfor;
+    src:url(../fonts/batmfo__.ttf)
+}
 @font-face{
     font-family: masseffect;
     src:url(../fonts/me123.ttf);
@@ -491,6 +494,7 @@ label {
     background: #D8D8D8;
     width: 400px;
     display: inline-block;
+    border: 1px solid #000;
 }
 
 .divImgPrincipal .img3{
@@ -509,6 +513,7 @@ label {
     font-size: 1.5rem;
     font-family: batman;
     text-align: center;
+    width:400px;
 }
 
 .divHeroe{
@@ -540,7 +545,7 @@ label {
 }
 
 .containerHeroe{
-    background: #A4A4A4;
+    background: #E0F8E0;
     position:relative;
     top: -60px;
     padding: 50px 10px 20px 50px;
@@ -556,8 +561,8 @@ label {
 .imgHeroe{
     min-width: 250px;
     min-height: 250px;
-    max-width: 300px;
-    max-height: 400px;
+    max-width: 500px;
+    max-height: 500px;
 }
 
 .img1{
@@ -576,6 +581,52 @@ label {
     font-size: 1.6rem;
     color: rgba(0, 0, 0, 0.6);
 }
+
+/* BOTON CONFIRMAR+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+.div-confirm{
+    position:relative;
+    background-image: url(../img/killingjoke.jpg);
+    background-size: 100%;
+    top:-55px;
+}
+.estasSeguro{
+    text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+    color:white;
+    height: 160px;
+    width: 100%;
+    font-size: 1.5rem;
+    font-family: batman;
+    padding: 45px 20px 25px 20px;
+    text-align: center;
+    border-bottom:1px solid #000;
+}
+.btn-confirmContainer{
+    height: 105px;
+    width: 100%;
+    background: gray;
+    z-index:15;
+}
+.btn-confirm{
+    font-family: batman;
+    border-radius: 5px;
+    margin: 20px 0 30px 67px;
+    width:105px;
+    height: 60px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    background-color: #2E2E2E;
+    color: #ecf0f1;
+    transition: background-color .3s;
+
+}
+
+.btn-confirm:hover{
+    cursor:pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.estasSeguro h4{
+    padding-top: 10px;
+}
+
 
 @media (max-width: 650px){ 
     .form-titulo{

@@ -18,7 +18,7 @@ window.info =(id)=>{
             if(heroes){
                 heroes.forEach((element) => {
                     if(element.id == id){
-                        Mostrar(element);                       
+                        Mostrar(element);                      
                   }
                 });
             }
@@ -28,13 +28,66 @@ window.info =(id)=>{
         })
 };
 
+window.deleteHero =(id)=>{
+
+    Api("GET","data.json")
+        .then((heroes) => {
+            if(heroes){
+                heroes.forEach((element) => {
+                    if(element.id == id){
+                        Borrando(element);                      
+                  }
+                });
+            }
+        })
+        .catch((error) =>{
+            alert("No encuentro el Heroe");
+        })
+};
+
+
+const Borrando = (heroes)=>{
+    let borrar = heroes.id;
+    let nombre = heroes.nombre;   
+    
+    const htmlTemplate2 = `
+        <div class="div-confirm">
+            <div class="estasSeguro">
+                <h4>Realmente quieres borrar a "${nombre}"?<h4>
+            </div>
+            <div class="btn-confirmContainer">
+                <button class="btn-confirm" id="deleteButton" onclick="Delete(${borrar})">Si</button>
+                <button class="btn-confirm" id="boton-cancelar">No</button>
+            </div>
+        </div>`
+    
+
+    const modal = document.getElementById('myModal');
+    const modal1 = document.getElementById('Cambiaso');
+    modal1.innerHTML = htmlTemplate2;
+    ShowModal();
+
+    const cancelar = document.getElementById('boton-cancelar');
+
+    cancelar.onclick = ()=>{
+        modal.style.display = "none";
+    } 
+
+    const header = document.getElementById('modal-header');
+    header.style.background="white";
+
+    const mymodal = document.getElementById('myModalContent');
+    mymodal.style.margin='0 auto';
+    mymodal.style.height = '250px';
+    mymodal.style.width = '400px';
+    modal.style.background='none';
+}
 
 const Mostrar = (heroe)=>{
     let nombre = heroe.nombre;
     let foto1 = heroe.foto[1];
     let foto2 = heroe.foto[2];
     let foto3 = heroe.foto[3];
-    let foto4 = heroe.foto[4];
     let info1 = heroe.informacion[0];
     let info2 = heroe.informacion[1];
     let info3 = heroe.informacion[2];
@@ -59,7 +112,7 @@ const Mostrar = (heroe)=>{
                 <div class="containerHeroe2">
                     <div class="divImgPrincipal">
                         <h3>${nombre}</h3>
-                        <img class="img3" src="${foto4}"></img>
+                        <img class="img3" src="${foto3}"></img>
                     </div>
                     <div class="divInfoPrincipal">
                         <h3 class="">Informacion General</h3>
@@ -115,8 +168,7 @@ const Mostrar = (heroe)=>{
     mymodal.style.width = '90vw';
     const header = document.getElementById('modal-header')
     header.style.background="white";
-    const close = document.getElementById('close');
-    close.style.color = '#A4A4A4';
+
     const modal = document.getElementById('Cambiaso');
     modal.innerHTML = htmlTemplate;
     ShowModal();
@@ -163,7 +215,7 @@ const view = (viewHeroes) =>{
                     <td class="romance">${viewHeroes.romance}</td>
                     <td class="botones">
                     <button class="btn" onclick=editHero(${viewHeroes.id})><span><i class="fas fa-edit"></i></span></button>
-                    <button alt="Borrar" class="btn-del" onclick=Delete(${viewHeroes.id})><span><i class="far fa-trash-alt"></i></span></button>
+                    <button alt="Borrar" class="btn-del" onclick=deleteHero(${viewHeroes.id})><span><i class="far fa-trash-alt"></i></span></button>
                     </td>
 
                 </tr> 
