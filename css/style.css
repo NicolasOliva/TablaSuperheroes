@@ -584,6 +584,7 @@ label {
 
 /* BOTON CONFIRMAR+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 .div-confirm{
+    border: 2px solid #000;
     position:relative;
     background-image: url(../img/killingjoke.jpg);
     background-size: 100%;
